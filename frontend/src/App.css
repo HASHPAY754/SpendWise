@@ -1,0 +1,442 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #20352a;
+  background: #f4f7f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+.app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 28px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 35px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 49px;
+  height: 49px;
+  background: #176b52;
+  color: white;
+  border-radius: 15px;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.brand-text {
+  flex: 1;
+}
+
+.brand-text h1, .brand-text p {
+  margin: 0;
+}
+
+.brand-text h1 {
+  font-size: 23px;
+}
+
+.brand-text p {
+  margin-top: 3px;
+  color: #7c8a81;
+  font-size: 13px;
+}
+
+.nav-label {
+  background: #e4f2e9;
+  color: #176b52;
+  border-radius: 30px;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #238364;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.welcome h2 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 38px);
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  color: #78867d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.total-card {
+  min-width: 285px;
+  padding: 23px 25px;
+  color: white;
+  background: linear-gradient(135deg, #176b52, #104a3a);
+  border-radius: 19px;
+  box-shadow: 0 12px 25px #176b521c;
+}
+
+.total-card p {
+  color: #d2e8dd;
+  font-size: 12px;
+}
+
+.total-card h2 {
+  margin: 9px 0;
+  font-size: 29px;
+  overflow-wrap: anywhere;
+}
+
+.total-card span {
+  color: #d2e8dd;
+  font-size: 12px;
+}
+
+.panel {
+  margin-bottom: 25px;
+  padding: 27px;
+  background: white;
+  border: 1px solid #e7ede8;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px #183b2910;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.section-heading p {
+  margin: 5px 0 0;
+  color: #7b8982;
+  font-size: 13px;
+}
+
+.plus-icon, .count {
+  display: grid;
+  place-items: center;
+  background: #e6f4ec;
+  color: #176b52;
+  border-radius: 12px;
+  min-width: 40px;
+  height: 40px;
+  font-size: 23px;
+}
+
+.count {
+  min-width: auto;
+  height: auto;
+  padding: 9px 12px;
+  border-radius: 25px;
+  font-size: 12px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #37483f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field input, .field select {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 1px solid #dfe7e1;
+  border-radius: 10px;
+  background: #fbfcfb;
+  color: #26362d;
+  outline: none;
+}
+
+.field input:focus, .field select:focus {
+  border-color: #238364;
+  box-shadow: 0 0 0 3px #23836418;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 23px;
+}
+
+.primary-btn, .secondary-btn, .edit-btn, .delete-btn {
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary-btn {
+  background: #176b52;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #10513d;
+}
+
+.secondary-btn {
+  background: #edf1ee;
+  color: #34483c;
+}
+
+.alert {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.success {
+  background: #e6f6ec;
+  color: #176b43;
+}
+
+.error {
+  background: #fff0ef;
+  color: #b42318;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  background: #f8faf8;
+  color: #829087;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+th, td {
+  padding: 16px 13px;
+  border-bottom: 1px solid #edf0ed;
+}
+
+td {
+  color: #637067;
+  font-size: 13px;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.expense-title, .amount {
+  color: #26372d;
+  font-weight: 700;
+}
+
+.category {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #eef2ef;
+  color: #506256;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.category.food {
+  background: #fff0dc;
+  color: #a75b16;
+}
+
+.category.travel {
+  background: #e4efff;
+  color: #315da2;
+}
+
+.category.bills {
+  background: #f0e8ff;
+  color: #7045a2;
+}
+
+.category.shopping {
+  background: #fce8f1;
+  color: #a13d72;
+}
+
+.category.other {
+  background: #e8f3ee;
+  color: #287257;
+}
+
+.actions {
+  display: flex;
+  gap: 7px;
+}
+
+.edit-btn {
+  background: #e8f1ff;
+  color: #315da2;
+  padding: 8px 11px;
+}
+
+.delete-btn {
+  background: #fff0ef;
+  color: #b42318;
+  padding: 8px 11px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+  filter: brightness(0.96);
+}
+
+.empty {
+  padding: 40px 15px;
+  text-align: center;
+  color: #7a8980;
+  font-size: 13px;
+}
+
+.empty h3 {
+  color: #2a3d31;
+  margin-bottom: 6px;
+}
+
+.empty-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  border-radius: 15px;
+  background: #e6f4ec;
+  color: #176b52;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  color: #8a968e;
+  font-size: 12px;
+}
+
+@media (max-width: 720px) {
+  .app {
+    padding: 20px 14px;
+  }
+
+  .navbar {
+    margin-bottom: 25px;
+  }
+
+  .nav-label {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .welcome {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .total-card {
+    min-width: 0;
+  }
+
+  .panel {
+    padding: 19px 14px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .field.full {
+    grid-column: auto;
+  }
+
+  .section-heading h2 {
+    font-size: 17px;
+  }
+
+  th, td {
+    padding: 14px 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-text h1 {
+    font-size: 19px;
+  }
+
+  .brand-text p {
+    font-size: 11px;
+  }
+
+  .nav-label {
+    max-width: 105px;
+    text-align: center;
+  }
+}
